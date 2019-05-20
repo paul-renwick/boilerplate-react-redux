@@ -1,13 +1,17 @@
 import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Words from './Words'
-import AddWord from './AddWord'
+// Component Imports
+import Test from './Test'
 
-const App = () => (
-  <div className='app-container'>
-    <Words />
-    <AddWord />
-  </div>
-)
+const App = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path='/' component={Test} />
+      </Switch>
+    </Router>
+  )
+}
 
 export default App
