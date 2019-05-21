@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
+import SignIn from './SignIn'
+
 // Material UI
 import { withStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
@@ -27,7 +29,7 @@ class Test extends React.Component {
     return (
       <React.Fragment>
 
-        <Link to='/SignIn'><h2>This link goes nowhere.</h2></Link>
+        <Link to='/SignIn'><Typography>This links to the Material UI Sign In</Typography></Link>
         <Grid container spacing={24}>
           <Grid item xs={12}>
             <Paper className={classes.paper}><Typography variant='h1'>Draft layout of my personal project</Typography></Paper>
@@ -39,8 +41,7 @@ class Test extends React.Component {
           </Grid>
           <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>
-              <Typography variant='h3'>Perhaps this is where feedback for personal project could exist.
-              By feedback I am referring to the percent correct, target etc.</Typography>
+              <SignIn />
             </Paper>
           </Grid>
           <Grid item xs={6} sm={3}>
